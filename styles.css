@@ -1,20 +1,20 @@
 :root {
-  --bg: #f2f0f6;
-  --surface: rgba(246, 244, 250, 0.78);
-  --surface-strong: rgba(248, 246, 252, 0.92);
-  --card: rgba(255, 255, 255, 0.6);
-  --card-strong: rgba(255, 255, 255, 0.84);
-  --ink: #1c1847;
-  --muted: #706a94;
-  --line: rgba(83, 88, 183, 0.15);
-  --coral: #ff696f;
-  --coral-soft: #ffb6c4;
-  --violet: #4f5af0;
-  --indigo: #26206f;
-  --lilac: #d8d2fb;
-  --rose: #ffd9e2;
-  --butter: #fff1f4;
-  --shadow: 0 22px 70px rgba(38, 32, 111, 0.1);
+  --bg: #f5f4f8;
+  --surface: rgba(255, 255, 255, 0.7);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --card: rgba(255, 255, 255, 0.74);
+  --card-strong: rgba(255, 255, 255, 0.92);
+  --ink: #1a1b3a;
+  --muted: #6d6d8d;
+  --line: rgba(58, 64, 167, 0.12);
+  --coral: #ff6d77;
+  --coral-soft: #ffc1ca;
+  --violet: #5461f5;
+  --indigo: #2f327e;
+  --lilac: #e6e4ff;
+  --rose: #ffe4ea;
+  --butter: #fff8fb;
+  --shadow: 0 18px 50px rgba(37, 38, 102, 0.08);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -31,10 +31,13 @@ html {
 
 body {
   margin: 0;
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.96), rgba(245, 243, 249, 0.94) 34%, rgba(239, 237, 245, 0.98) 100%),
-    linear-gradient(180deg, #f4f2f8 0%, #efedf5 100%);
+    radial-gradient(36rem 36rem at -4% 12%, rgba(84, 97, 245, 0.2), transparent 60%),
+    radial-gradient(34rem 34rem at 104% 18%, rgba(255, 109, 119, 0.16), transparent 56%),
+    radial-gradient(32rem 32rem at 102% 102%, rgba(84, 97, 245, 0.15), transparent 54%),
+    radial-gradient(30rem 30rem at -2% 100%, rgba(255, 109, 119, 0.13), transparent 54%),
+    linear-gradient(180deg, #f6f5f9 0%, #f1eff6 100%);
   color: var(--ink);
   min-width: 320px;
 }
@@ -61,72 +64,12 @@ a.button {
 
 .page-shell::before,
 .page-shell::after {
-  content: "";
-  position: fixed;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.8;
-}
-
-.page-shell::before {
-  top: -11rem;
-  left: -18rem;
-  width: 46rem;
-  height: 60rem;
-  border-radius: 48% 52% 38% 62% / 24% 30% 70% 76%;
-  background:
-    repeating-radial-gradient(circle at 70% 26%, rgba(255, 255, 255, 0.42) 0 2px, transparent 2px 48px),
-    linear-gradient(180deg, rgba(93, 101, 255, 0.96) 0%, rgba(56, 50, 177, 0.96) 48%, rgba(33, 27, 103, 0.98) 100%);
-  transform: rotate(18deg);
-}
-
-.page-shell::after {
-  top: -5rem;
-  right: -16rem;
-  width: 40rem;
-  height: 58rem;
-  border-radius: 58% 42% 55% 45% / 34% 24% 76% 66%;
-  background:
-    repeating-radial-gradient(circle at 18% 44%, rgba(255, 255, 255, 0.48) 0 2px, transparent 2px 48px),
-    linear-gradient(180deg, rgba(255, 226, 231, 0.84) 0%, rgba(255, 169, 184, 0.92) 42%, rgba(255, 102, 109, 0.98) 100%);
-  transform: rotate(-14deg);
+  display: none;
 }
 
 .background-orb,
 .background-grid {
-  position: fixed;
-  inset: auto;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.background-orb {
-  width: 22rem;
-  height: 22rem;
-  border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.78;
-}
-
-.orb-a {
-  left: -10rem;
-  bottom: -8rem;
-  background: rgba(255, 124, 130, 0.74);
-}
-
-.orb-b {
-  right: -8rem;
-  bottom: -7rem;
-  background: rgba(89, 98, 255, 0.68);
-}
-
-.background-grid {
-  inset: 0;
-  background:
-    repeating-radial-gradient(circle at -8% -2%, rgba(255, 255, 255, 0.28) 0 2px, transparent 2px 58px),
-    repeating-radial-gradient(circle at 108% 24%, rgba(255, 255, 255, 0.24) 0 2px, transparent 2px 58px),
-    repeating-radial-gradient(circle at 104% 108%, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px 56px);
-  opacity: 0.2;
+  display: none;
 }
 
 .site-header,
@@ -145,11 +88,11 @@ a.button {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.1rem;
-  background: rgba(247, 245, 250, 0.76);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 999px;
-  box-shadow: 0 18px 45px rgba(38, 32, 111, 0.08);
+  box-shadow: 0 16px 40px rgba(37, 38, 102, 0.06);
   position: sticky;
   top: 1rem;
 }
@@ -170,13 +113,15 @@ a.button {
   place-items: center;
   background: linear-gradient(135deg, var(--indigo), var(--violet));
   color: #fffafc;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   font-size: 1.15rem;
 }
 
 .brand-text {
-  font-family: "Syne", sans-serif;
-  letter-spacing: -0.04em;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
   font-size: 1.05rem;
 }
 
@@ -283,7 +228,8 @@ a.button {
 .section h2,
 .contact-panel h2 {
   margin: 0;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   letter-spacing: -0.07em;
   line-height: 0.96;
 }
@@ -348,14 +294,14 @@ a.button {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
 }
 
 .visual-card-main {
   inset: 2rem 4rem auto 0;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(248, 245, 252, 0.84));
-  transform: rotate(-3deg);
+  background: rgba(255, 255, 255, 0.84);
+  transform: rotate(-2deg);
 }
 
 .visual-kicker,
@@ -371,7 +317,8 @@ a.button {
 
 .visual-card-main h2 {
   margin: 0.6rem 0 0.85rem;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   font-size: clamp(1.9rem, 3vw, 3rem);
   letter-spacing: -0.06em;
   line-height: 1;
@@ -390,7 +337,7 @@ a.button {
   top: 12rem;
   width: 14rem;
   padding: 1rem;
-  background: rgba(34, 28, 100, 0.88);
+  background: linear-gradient(180deg, rgba(47, 50, 126, 0.96), rgba(84, 97, 245, 0.92));
   display: grid;
   gap: 0.75rem;
 }
@@ -411,12 +358,12 @@ a.button {
 }
 
 .pill-butter {
-  background: rgba(255, 214, 224, 0.18);
-  color: #fff1f7;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff7fb;
 }
 
 .pill-mint {
-  background: rgba(142, 149, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
   color: #eef0ff;
 }
 
@@ -425,8 +372,8 @@ a.button {
   right: 5rem;
   bottom: 1.5rem;
   padding: 1.5rem 1.6rem;
-  background: rgba(244, 226, 244, 0.82);
-  transform: rotate(2deg);
+  background: rgba(255, 255, 255, 0.82);
+  transform: rotate(1deg);
 }
 
 .visual-card-note ol {
@@ -439,9 +386,9 @@ a.button {
 .marquee-band {
   width: 100%;
   overflow: hidden;
-  border-top: 1px solid rgba(83, 88, 183, 0.08);
-  border-bottom: 1px solid rgba(83, 88, 183, 0.08);
-  background: rgba(249, 247, 252, 0.48);
+  border-top: 1px solid rgba(58, 64, 167, 0.08);
+  border-bottom: 1px solid rgba(58, 64, 167, 0.08);
+  background: rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(12px);
 }
 
@@ -521,7 +468,8 @@ a.button {
 .service-card h3,
 .process-panel h3 {
   margin: 0;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   font-size: 1.8rem;
   letter-spacing: -0.05em;
   line-height: 1.05;
@@ -539,15 +487,15 @@ a.button {
 }
 
 .service-coral {
-  background: linear-gradient(180deg, rgba(255, 228, 233, 0.92) 0%, rgba(255, 249, 250, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(255, 233, 237, 0.94) 0%, rgba(255, 249, 250, 0.92) 100%);
 }
 
 .service-lime {
-  background: linear-gradient(180deg, rgba(240, 236, 255, 0.92) 0%, rgba(251, 249, 255, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(241, 239, 255, 0.94) 0%, rgba(251, 250, 255, 0.92) 100%);
 }
 
 .service-violet {
-  background: linear-gradient(180deg, rgba(227, 232, 255, 0.92) 0%, rgba(248, 248, 255, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(231, 236, 255, 0.94) 0%, rgba(249, 250, 255, 0.92) 100%);
 }
 
 .audience-section {
@@ -621,7 +569,7 @@ a.button {
 }
 
 .process-panel {
-  background: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.76);
   padding: 2rem;
 }
 
@@ -634,7 +582,7 @@ a.button {
 
 .process-preview {
   padding: 1.25rem;
-  background: linear-gradient(180deg, rgba(238, 232, 255, 0.96) 0%, rgba(255, 238, 243, 0.96) 100%);
+  background: linear-gradient(180deg, rgba(241, 238, 255, 0.98) 0%, rgba(255, 241, 245, 0.98) 100%);
   display: grid;
   gap: 1rem;
 }
@@ -674,7 +622,8 @@ a.button {
 
 #preview-caption {
   margin: 0;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   letter-spacing: -0.05em;
   line-height: 1;
@@ -687,7 +636,7 @@ a.button {
 
 .portfolio-panel {
   padding: 1.8rem;
-  background: linear-gradient(180deg, rgba(255, 232, 236, 0.96) 0%, rgba(223, 226, 255, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(255, 236, 241, 0.96) 0%, rgba(234, 236, 255, 0.94) 100%);
   display: grid;
   gap: 1.5rem;
 }
@@ -763,8 +712,8 @@ a.button {
 .contact-panel {
   padding: 2rem;
   background:
-    radial-gradient(circle at top right, rgba(255, 168, 183, 0.32), transparent 14rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(239, 236, 251, 0.92));
+    radial-gradient(circle at top right, rgba(255, 168, 183, 0.22), transparent 14rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(241, 239, 250, 0.96));
 }
 
 .contact-actions {
@@ -864,34 +813,6 @@ a.button {
 }
 
 @media (max-width: 760px) {
-  .page-shell::before,
-  .page-shell::after {
-    opacity: 0.38;
-    filter: blur(10px);
-  }
-
-  .page-shell::before {
-    top: -14rem;
-    left: -20rem;
-    width: 34rem;
-    height: 42rem;
-  }
-
-  .page-shell::after {
-    top: -8rem;
-    right: -18rem;
-    width: 30rem;
-    height: 42rem;
-  }
-
-  .background-grid {
-    opacity: 0.14;
-  }
-
-  .background-orb {
-    opacity: 0.28;
-  }
-
   .site-header {
     padding: 1rem;
     align-items: flex-start;
