@@ -5,7 +5,7 @@ const processSteps = [
       "Getting to know you, your brand goals, and how we can help using our creative expertise to offer new perspectives and practical solutions.",
     chip: "Discovery",
     caption: "Fresh perspective unlocked",
-    accent: "linear-gradient(180deg, #f4ecff 0%, #fff3db 100%)",
+    accent: "linear-gradient(180deg, rgba(234, 228, 255, 0.98) 0%, rgba(248, 242, 255, 0.98) 100%)",
   },
   {
     title: "Freelancer matching",
@@ -13,7 +13,7 @@ const processSteps = [
       "We match you with the freelancer that best suits your needs and can execute at the level your project deserves, without awkward project management or unclear communication.",
     chip: "Matching",
     caption: "Talent aligned to the brief",
-    accent: "linear-gradient(180deg, #ebffd3 0%, #fff7d7 100%)",
+    accent: "linear-gradient(180deg, rgba(255, 230, 236, 0.98) 0%, rgba(248, 238, 255, 0.98) 100%)",
   },
   {
     title: "Creation and feedback",
@@ -21,7 +21,7 @@ const processSteps = [
       "You stay in the loop throughout the process with space to review, refine, and shape the work so the result feels considered instead of rushed.",
     chip: "Creation",
     caption: "Feedback keeps the work sharp",
-    accent: "linear-gradient(180deg, #dff3ff 0%, #f7f0ff 100%)",
+    accent: "linear-gradient(180deg, rgba(226, 234, 255, 0.98) 0%, rgba(244, 240, 255, 0.98) 100%)",
   },
   {
     title: "Delivery and follow-ups",
@@ -29,7 +29,7 @@ const processSteps = [
       "Everything goes live with support close by. Need help down the road? Bridge Creatives stays within reach for post-project follow-ups.",
     chip: "Delivery",
     caption: "Launch ready and still supported",
-    accent: "linear-gradient(180deg, #e6ffd8 0%, #fff3d7 100%)",
+    accent: "linear-gradient(180deg, rgba(255, 221, 229, 0.98) 0%, rgba(229, 231, 255, 0.98) 100%)",
   },
 ];
 
